@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PORTFOLIO | จักริน ต่างสี</title>
 
-<link href="https://googleapis.com" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -300,6 +300,7 @@ section {
 </head>
 <body>
 
+    <!-- แถบเมนูด้านบนตามคลาสที่ตั้งไว้ -->
     <header>
         <div class="logo">PORTFOLIO</div>
         <nav>
@@ -309,6 +310,7 @@ section {
         </nav>
     </header>
 
+    <!-- ส่วนแนะนำตัวหน้าแรก (Hero) -->
     <div class="hero">
         <div class="hero-text">
             <h1>สวัสดี! ผมคือ <br><span>จักริน ต่างสี</span></h1>
@@ -316,10 +318,11 @@ section {
             <a href="#about" class="button">ทำความรู้จักกันเพิ่ม</a>
         </div>
         <div class="hero-image">
-            <p>[ รูปภาพพอร์ตโฟลิโอ ]</p>
+            <p>กรอบใส่รูปภาพพอร์ตโฟลิโอ</p>
         </div>
     </div>
 
+    <!-- กล่องประวัติเกี่ยวกับฉัน -->
     <section id="about">
         <div class="section-title">
             <h2>เกี่ยวกับฉัน</h2>
@@ -336,6 +339,7 @@ section {
         </div>
     </section>
 
+    <!-- ส่วนประวัติการศึกษา (Timeline) -->
     <section id="education" class="education">
         <div class="section-title">
             <h2>ประวัติการศึกษา</h2>
@@ -344,11 +348,37 @@ section {
         <div class="timeline">
             <div class="timeline-item">
                 <h3>ระดับการศึกษาปัจจุบัน</h3>
-                <p>กำลังศึกษาและพัฒนาทักษะทางคอมพิวเตอร์อย่างต่อเนื่อง</p>
+                <p>กำลังศึกษาและเรียนรู้พัฒนาโครงสร้างโค้ดและระบบเว็บไซต์ออนไลน์</p>
             </div>
         </div>
     </section>
 
+    <!-- ส่วนแสดงโครงสร้างภาพกิจกรรมและผลงาน -->
+    <section id="works">
+        <div class="section-title">
+            <h2>ผลงานและกิจกรรม</h2>
+            <p>คลังภาพผลงานกิจกรรมที่จัดระเบียบแบบ Grid</p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-card">
+                <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 1</div>
+                <h3>กิจกรรมชิ้นที่ 1</h3>
+                <p>คำอธิบายกิจกรรมชิ้นที่ 1 ตามโค้ดที่ออกแบบไว้</p>
+            </div>
+            <div class="gallery-card">
+                <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 2</div>
+                <h3>กิจกรรมชิ้นที่ 2</h3>
+                <p>คำอธิบายกิจกรรมชิ้นที่ 2 ตามโค้ดที่ออกแบบไว้</p>
+            </div>
+            <div class="gallery-card">
+                <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 3</div>
+                <h3>กิจกรรมชิ้นที่ 3</h3>
+                <p>คำอธิบายกิจกรรมชิ้นที่ 3 ตามโค้ดที่ออกแบบไว้</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้ายเว็บสี Navy ตามธีมหลัก -->
     <footer style="background: var(--navy); color: white; text-align: center; padding: 25px; font-size: 14px;">
         <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
     </footer>
