@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PORTFOLIO | จักริน ต่างสี</title>
+<title>PORTFOLIO | แฟ้มสะสมผลงาน</title>
 
 <link href="https://googleapis.com" rel="stylesheet">
 
@@ -58,25 +58,16 @@ nav a:hover {
 }
 
 .hero {
-    min-height: 380px;
     background: linear-gradient(120deg, #10294b, #244e7c);
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 60px 8%;
     text-align: center;
 }
 
-.hero-text {
-    width: 100%;
-    max-width: 800px;
-}
-
 .hero h1 {
-    font-size: 46px;
+    font-size: 42px;
     line-height: 1.3;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .hero h1 span {
@@ -84,34 +75,54 @@ nav a:hover {
 }
 
 .hero h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
-    margin-bottom: 12px;
-    color: #ffffff;
+    margin-bottom: 8px;
 }
 
 .hero p {
     font-size: 20px;
     color: var(--orange);
     font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.creators-photos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.creator-photo-box {
+    width: 240px;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: #193d68;
+}
+
+.creator-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 section {
-    padding: 75px 8%;
+    padding: 65px 8%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .section-title h2 {
     color: var(--navy);
-    font-size: 32px;
-}
-
-.section-title p {
-    color: #778397;
+    font-size: 30px;
 }
 
 .section-title h2::after {
@@ -126,26 +137,28 @@ section {
 
 .card {
     background: white;
-    padding: 30px;
+    padding: 35px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: auto;
 }
 
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 900px;
-    margin: auto;
 }
 
-.profile-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #edf0f4;
+.profile-box {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 4px solid var(--navy);
     font-size: 16px;
 }
 
-.profile-item strong {
+.profile-box strong {
     color: var(--blue);
 }
 
@@ -157,61 +170,51 @@ section {
     border-radius: 8px;
     color: var(--navy);
     text-align: center;
+    font-size: 16px;
 }
 
 .education {
     background: #eaf0f7;
 }
 
-.timeline {
-    max-width: 750px;
-    margin: auto;
+.edu-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 16px;
 }
 
-.timeline-item {
-    background: white;
-    padding: 20px 25px;
-    margin-bottom: 15px;
-    border-left: 5px solid var(--orange);
-    border-radius: 8px;
+.edu-item:last-child {
+    border-bottom: none;
 }
 
-.timeline-item h3 {
+.edu-item strong {
+    color: var(--blue);
+}
+
+.why-item {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.why-item:last-child {
+    margin-bottom: 0;
+}
+
+.why-item strong {
     color: var(--navy);
 }
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.why-card {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    border-top: 4px solid var(--orange);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.why-card h3 {
-    color: var(--blue);
-    margin-bottom: 12px;
-}
-
-/* ================================
-   ผลงานและกิจกรรม
-================================ */
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .gallery-card {
     background: white;
-    padding: 15px;
+    padding: 18px;
     border-radius: 13px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     overflow: hidden;
@@ -227,52 +230,22 @@ section {
 
 .gallery-card h3 {
     color: var(--navy);
-    margin-top: 12px;
+    margin-top: 15px;
+    font-size: 20px;
 }
 
 .gallery-card p {
     color: #718096;
     font-size: 14px;
+    margin-top: 6px;
 }
 
-/* ================================
-   การแสดงผลงานกิจกรรมแบบใหญ่
-================================ */
-
-.work-main {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.work-main .gallery-card img {
-    height: auto;
-    max-height: 650px;
-    object-fit: contain;
-    background: #f4f6fa;
-}
-
-/* ================================
-   เกียรติบัตร
-================================ */
-
-.certificate-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.certificate-card {
-    background: white;
-    padding: 18px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-}
-
-.certificate-card h3 {
-    color: var(--navy);
-    margin-top: 10px;
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -280,7 +253,11 @@ section {
         grid-template-columns: 1fr;
     }
     .hero h1 {
-        font-size: 34px;
+        font-size: 32px;
+    }
+    .creator-photo-box {
+        width: 200px;
+        height: 240px;
     }
 }
 </style>
@@ -290,37 +267,45 @@ section {
     <header>
         <div class="logo">PORTFOLIO</div>
         <nav>
-            <a href="#about">ประวัติส่วนตัว</a>
+            <a href="#about">ข้อมูลผู้จัดทำ</a>
             <a href="#education">ประวัติการศึกษา</a>
-            <a href="#why">แรงบันดาลใจ</a>
+            <a href="#why">ทำไมต้องเรียนสาขานี้</a>
             <a href="#works">ผลงานและกิจกรรม</a>
         </nav>
     </header>
 
-    <!-- หน้าปกสะอาดเรียบร้อย จัดกึ่งกลางสวยงาม ไม่มีรูปภาพหรือกรอบใด ๆ มาเกะกะสายตาแล้วครับ -->
     <div class="hero">
-        <div class="hero-text">
-            <h1>PORTFOLIO | <br><span>แฟ้มสะสมผลงาน</span></h1>
-            <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
-            <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
+        <h1>PORTFOLIO | <span>แฟ้มสะสมผลงาน</span></h1>
+        <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
+        <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
+        
+        <div class="creators-photos">
+            <div class="creator-photo-box">
+                <img id="photo-3" src="" alt="ผู้จัดทำคนที่ 1">
+            </div>
+            <div class="creator-photo-box">
+                <img id="photo-4" src="FB_IMG_1794350131552.jpg" alt="ผู้จัดทำคนที่ 2">
+            </div>
         </div>
     </div>
 
     <section id="about">
         <div class="section-title">
-            <h2>ประวัติส่วนตัว</h2>
+            <h2>ข้อมูลประวัติส่วนตัวผู้จัดทำ</h2>
         </div>
         <div class="card">
             <div class="profile-grid">
-                <div class="profile-item"><strong>ชื่อ-นามสกุล:</strong> นายจักริน ต่างสี</div>
-                <div class="profile-item"><strong>ชื่อเล่น:</strong> จัก</div>
-                <div class="profile-item"><strong>อายุ:</strong> 18 ปี</div>
-                <div class="profile-item"><strong>เกิดวันที่:</strong> 29 สิงหาคม 2551</div>
-                <div class="profile-item"><strong>ศาสนา:</strong> พุทธ</div>
-                <div class="profile-item"><strong>แผนการเรียน:</strong> ศิลป์-คำนวณ (เกรดเฉลี่ย 2.37)</div>
+                <div class="profile-box">
+                    <p><strong>ชื่อ:</strong> นายจักริน ต่างสี</p>
+                    <p><strong>เลขที่:</strong> 3</p>
+                </div>
+                <div class="profile-box">
+                    <p><strong>ชื่อ:</strong> นาย อครินทร์ วรินเวช</p>
+                    <p><strong>เลขที่:</strong> 16</p>
+                </div>
             </div>
             <div class="motto">
-                คติประจำใจ: "ความพยายามและทักษะที่ฝึกฝนจะเป็นแรงผลักดันไปสู่ความสำเร็จ"
+                <strong>คติประจำใจ:</strong> ความพยายามและทักษะที่ฝึกฝนจะเป็นแรงผลักดันไปสู่ความสำเร็จ
             </div>
         </div>
     </section>
@@ -329,22 +314,15 @@ section {
         <div class="section-title">
             <h2>ประวัติการศึกษา</h2>
         </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>ระดับชั้นอนุบาล 1</h3>
-                <p>โรงเรียนบ้านโคกคา</p>
+        <div class="card">
+            <div class="edu-item">
+                <strong>สถานศึกษา:</strong> โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์ รัชมังคลาภิเษก
             </div>
-            <div class="timeline-item">
-                <h3>ระดับชั้นอนุบาล 2 - อนุบาล 3</h3>
-                <p>โรงเรียนบ้านนาใหญ่</p>
+            <div class="edu-item">
+                <strong>ระดับชั้นมัธยมศึกษา:</strong> ชั้นมัธยมศึกษาปีที่ 6
             </div>
-            <div class="timeline-item">
-                <h3>ระดับชั้นประถมศึกษาปีที่ 1 - 6</h3>
-                <p>โรงเรียนบ้านนาใหญ่</p>
-            </div>
-            <div class="timeline-item">
-                <h3>ระดับชั้นมัธยมศึกษาปีที่ 1 - 6</h3>
-                <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์ รัชมังคลาภิเษก</p>
+            <div class="edu-item">
+                <strong>ความสนใจ:</strong>
             </div>
         </div>
     </section>
@@ -353,10 +331,16 @@ section {
         <div class="section-title">
             <h2>ทำไมต้องเรียนสาขานี้</h2>
         </div>
-        <div class="card" style="max-width: 900px; margin: auto; padding: 30px;">
-            <p style="margin-bottom: 15px;"><strong>แรงบันดาลใจ:</strong> สนใจเรื่องการขนส่งและการจัดการสินค้าในชีวิตประจำวัน ที่ต้องการการวางแผนและจัดการให้สินค้าถึงปลายทางอย่างเป็นระบบ</p>
-            <p style="margin-bottom: 15px;"><strong>เหตุผลที่เลือกเรียน:</strong> เลือกศึกษาต่อสาขาการจัดการโลจิสติกส์และซัพพลายเชน เพื่อเรียนรู้การวางแผนขนส่ง การจัดเก็บ การบริหารสินค้าคงคลัง และกระบวนการเคลื่อนย้ายสินค้าเพื่อนำไปพัฒนาต่อยอด</p>
-            <p><strong>เป้าหมายในอนาคต:</strong> ต้องการทำงานด้านการขนส่งหรือหน่วยงานภาครัฐที่เกี่ยวข้อง (เช่น กรมการขนส่งทางบก) จึงตั้งใจศึกษาเพื่อสร้างพื้นฐานความรู้และทักษะสำหรับเป้าหมายการทำงานต่อไป</p>
+        <div class="card">
+            <div class="why-item">
+                <strong>แรงบันดาลใจ:</strong> สนใจเรื่องการขนส่งและการจัดการสินค้าในชีวิตประจำวัน ที่ต้องการการวางแผนและจัดการให้สินค้าถึงปลายทางอย่างเป็นระบบ
+            </div>
+            <div class="why-item">
+                <strong>เหตุผลที่เลือกเรียน:</strong> เลือกศึกษาต่อสาขาการจัดการโลจิสติกส์และซัพพลายเชน เพื่อเรียนรู้การวางแผนขนส่ง การจัดเก็บ การบริหารสินค้าคงคลัง และกระบวนการเคลื่อนย้ายสินค้าเพื่อนำไปพัฒนาต่อยอด
+            </div>
+            <div class="why-item">
+                <strong>เป้าหมายในอนาคต:</strong> ต้องการทำงานด้านการขนส่งหรือหน่วยงานภาครัฐที่เกี่ยวข้อง (เช่น กรมการขนส่งทางบก) จึงตั้งใจศึกษาเพื่อสร้างพื้นฐานความรู้และทักษะสำหรับเป้าหมายการทำงานต่อไป
+            </div>
         </div>
     </section>
 
@@ -379,8 +363,19 @@ section {
     </section>
 
     <footer>
-        <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
+        <p>© 2026 จักริน ต่างสี & อครินทร์ วรินเวช</p>
     </footer>
+
+    <script>
+        fetch('https://github.com')
+        .then(res => res.json())
+        .then(files => {
+            const file3 = files.find(f => f.name.startsWith('FB_IMG_17943275'));
+            const file4 = files.find(f => f.name.startsWith('FB_IMG_17943501'));
+            if (file3) document.getElementById('photo-3').src = file3.name;
+            if (file4) document.getElementById('photo-4').src = file4.name;
+        });
+    </script>
 
 </body>
 </html>
