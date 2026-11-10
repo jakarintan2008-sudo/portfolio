@@ -57,6 +57,7 @@ nav a:hover {
     color: var(--orange);
 }
 
+/* จัดสัดส่วนหน้าปกสีน้ำเงินให้โชว์รูปตัวจริงคู่กับคำอธิบายอย่างลงตัว บาลานซ์ดีเยี่ยม */
 .hero {
     min-height: 520px;
     background: linear-gradient(120deg, #10294b, #244e7c);
@@ -66,50 +67,45 @@ nav a:hover {
     justify-content: space-around;
     padding: 60px 8%;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
 }
 
 .hero-text {
+    flex: 1;
     max-width: 550px;
 }
 
 .hero h1 {
-    font-size: 55px;
+    font-size: 48px;
     line-height: 1.3;
+    margin-bottom: 15px;
 }
 
 .hero h1 span {
     color: var(--orange);
 }
 
+.hero h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
 .hero p {
-    margin-top: 15px;
-    font-size: 18px;
+    font-size: 19px;
+    color: var(--orange);
+    font-weight: 500;
 }
 
-.hero-image {
-    width: 260px;
-    height: 330px;
-    border: 3px dashed var(--orange);
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    color: #dce6f2;
-    background: rgba(255,255,255,0.08);
-}
-
-.button {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--navy);
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 25px;
-    font-weight: 600;
+/* ตกแต่งรูปโปรไฟล์ของคุณให้เป็นทรงกลมขอบโมเดิร์นสวยหรู ปราศจากกรอบเส้นประสีส้ม 100% */
+.hero-avatar {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 section {
@@ -215,10 +211,6 @@ section {
     margin-bottom: 12px;
 }
 
-/* ================================
-   ผลงานและกิจกรรม
-================================ */
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -235,17 +227,10 @@ section {
 
 .gallery-card img {
     width: 100%;
-    height: 240px;
+    height: 320px;
     object-fit: cover;
     display: block;
     border-radius: 9px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-card img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .gallery-card h3 {
@@ -258,44 +243,26 @@ section {
     font-size: 14px;
 }
 
-/* ================================
-   การแสดงผลงานกิจกรรมแบบใหญ่
-================================ */
-
-.work-main {
-    max-width: 1000px;
-    margin: auto;
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
 }
 
-.work-main .gallery-card img {
-    height: auto;
-    max-height: 650px;
-    object-fit: contain;
-    background: #f4f6fa;
-}
-
-/* ================================
-   เกียรติบัตร
-================================ */
-
-.certificate-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.certificate-card {
-    background: white;
-    padding: 18px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-}
-
-.certificate-card h3 {
-    color: var(--navy);
-    margin-top: 10px;
+@media (max-width: 768px) {
+    .profile-grid, .gallery {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-avatar {
+        width: 220px;
+        height: 220px;
+    }
 }
 </style>
 </head>
@@ -317,9 +284,8 @@ section {
             <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
             <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
         </div>
-        <div class="hero-image">
-            <p>กรอบรูปพอร์ตโฟลิโอ</p>
-        </div>
+        <!-- ผูกระบบดึงรูปถ่ายจริงตัวคุณขึ้นมาโชว์เรียบร้อยแบบสวยหรู สะอาดตา -->
+        <img src="FB_IMG_17943275150240362.jpg" alt="รูปโปรไฟล์ จักริน" class="hero-avatar">
     </div>
 
     <section id="about">
@@ -369,7 +335,7 @@ section {
         <div class="section-title">
             <h2>ทำไมต้องเรียนสาขานี้</h2>
         </div>
-        <div class="card why-card" style="max-width: 900px; margin: auto;">
+        <div class="card" style="max-width: 900px; margin: auto; padding: 30px;">
             <p style="margin-bottom: 15px;"><strong>แรงบันดาลใจ:</strong> สนใจเรื่องการขนส่งและการจัดการสินค้าในชีวิตประจำวัน ที่ต้องการการวางแผนและจัดการให้สินค้าถึงปลายทางอย่างเป็นระบบ</p>
             <p style="margin-bottom: 15px;"><strong>เหตุผลที่เลือกเรียน:</strong> เลือกศึกษาต่อสาขาการจัดการโลจิสติกส์และซัพพลายเชน เพื่อเรียนรู้การวางแผนขนส่ง การจัดเก็บ การบริหารสินค้าคงคลัง และกระบวนการเคลื่อนย้ายสินค้าเพื่อนำไปพัฒนาต่อยอด</p>
             <p><strong>เป้าหมายในอนาคต:</strong> ต้องการทำงานด้านการขนส่งหรือหน่วยงานภาครัฐที่เกี่ยวข้อง (เช่น กรมการขนส่งทางบก) จึงตั้งใจศึกษาเพื่อสร้างพื้นฐานความรู้และทักษะสำหรับเป้าหมายการทำงานต่อไป</p>
@@ -384,7 +350,7 @@ section {
             <div class="gallery-card">
                 <img src="1794321907527.jpg" alt="จิตอาสาจัดทำโต๊ะไม้ให้ครู">
                 <h3>จิตอาสาจัดทำโต๊ะไม้ให้ครู</h3>
-                <p>กิจกรรมบำเพ็ญประโยชน์ร่วมใจกันลงมือวางแผนและจัดทำโต๊ะไม้เพื่อนำไปมอบให้ครูสำหรับนำไปใช้ประโยชน์ในสถานศึกษา</p>
+                <p>กิจกรรมบำเพ็ประโยชน์ร่วมใจกันลงมือวางแผนและจัดทำโต๊ะไม้เพื่อนำไปมอบให้ครูสำหรับนำไปใช้ประโยชน์ในสถานศึกษา</p>
             </div>
             <div class="gallery-card">
                 <img src="1794321907616.jpg" alt="เกียรติบัตร">
