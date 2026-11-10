@@ -62,72 +62,48 @@ nav a:hover {
     background: linear-gradient(120deg, #10294b, #244e7c);
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 60px 8%;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.hero-text {
-    max-width: 550px;
+    text-align: center;
+    gap: 15px;
 }
 
 .hero h1 {
-    font-size: 55px;
+    font-size: 42px;
     line-height: 1.3;
+    font-weight: 700;
 }
 
 .hero h1 span {
     color: var(--orange);
 }
 
-.hero p {
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-.hero-image {
-    width: 260px;
-    height: 330px;
-    border: 3px dashed var(--orange);
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+.hero h2 {
+    font-size: 24px;
+    font-weight: 400;
     color: #dce6f2;
-    background: rgba(255,255,255,0.08);
 }
 
-.button {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--navy);
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 25px;
-    font-weight: 600;
+.hero p {
+    font-size: 20px;
+    color: var(--orange);
+    font-weight: 500;
 }
 
 section {
-    padding: 75px 8%;
+    padding: 60px 8%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .section-title h2 {
     color: var(--navy);
     font-size: 32px;
-}
-
-.section-title p {
-    color: #778397;
 }
 
 .section-title h2::after {
@@ -142,22 +118,23 @@ section {
 
 .card {
     background: white;
-    padding: 30px;
+    padding: 35px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: auto;
 }
 
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 900px;
-    margin: auto;
 }
 
 .profile-item {
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #edf0f4;
+    font-size: 16px;
 }
 
 .profile-item strong {
@@ -165,13 +142,15 @@ section {
 }
 
 .motto {
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 20px;
     border-left: 5px solid var(--orange);
     background: #fff7ed;
     border-radius: 8px;
     color: var(--navy);
     text-align: center;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .education {
@@ -187,114 +166,84 @@ section {
     background: white;
     padding: 20px 25px;
     margin-bottom: 15px;
-    border-left: 5px solid var(--orange);
+    border-left: 5px solid var(--navy);
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
 }
 
 .timeline-item h3 {
-    color: var(--navy);
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.why-card {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    border-top: 4px solid var(--orange);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.why-card h3 {
     color: var(--blue);
-    margin-bottom: 12px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-/* ================================
-   ผลงานและกิจกรรม
-================================ */
+.timeline-item p {
+    color: #4a5568;
+}
+
+.why-box {
+    margin-top: 15px;
+}
+
+.why-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .gallery-card {
     background: white;
-    padding: 15px;
-    border-radius: 13px;
+    padding: 20px;
+    border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery-card img {
     width: 100%;
-    height: 240px;
+    height: 320px;
     object-fit: cover;
-    display: block;
-    border-radius: 9px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-card img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .gallery-card h3 {
     color: var(--navy);
-    margin-top: 12px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #edf0f4;
+    padding-bottom: 5px;
 }
 
 .gallery-card p {
-    color: #718096;
+    color: #5a6a85;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 25px;
     font-size: 14px;
 }
 
-/* ================================
-   การแสดงผลงานกิจกรรมแบบใหญ่
-================================ */
-
-.work-main {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.work-main .gallery-card img {
-    height: auto;
-    max-height: 650px;
-    object-fit: contain;
-    background: #f4f6fa;
-}
-
-/* ================================
-   เกียรติบัตร
-================================ */
-
-.certificate-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.certificate-card {
-    background: white;
-    padding: 18px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-}
-
-.certificate-card h3 {
-    color: var(--navy);
-    margin-top: 10px;
+@media (max-width: 768px) {
+    .profile-grid, .gallery {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
 }
 </style>
 </head>
@@ -303,72 +252,97 @@ section {
     <header>
         <div class="logo">PORTFOLIO</div>
         <nav>
-            <a href="#about">เกี่ยวกับฉัน</a>
-            <a href="#education">การศึกษา</a>
-            <a href="#works">ผลงาน</a>
+            <a href="#about">ประวัติส่วนตัว</a>
+            <a href="#education">ประวัติการศึกษา</a>
+            <a href="#why">แรงบันดาลใจ</a>
+            <a href="#works">ผลงานและกิจกรรม</a>
         </nav>
     </header>
 
+    <!-- แก้ไขหน้าตาส่วนหัวลบกล่องจำลองทิ้ง ปรับข้อความนำตามสั่งเป๊ะๆ -->
     <div class="hero">
-        <div class="hero-text">
-            <h1>สวัสดี! ผมคือ <br><span>จักริน ต่างสี</span></h1>
-            <p>ยินดีต้อนรับเข้าสู่เว็บไซต์แฟ้มสะสมผลงานออนไลน์ของผมครับ</p>
-            <a href="#about" class="button">ทำความรู้จักกันเพิ่ม</a>
-        </div>
-        <div class="hero-image">
-            <p>กรอบรูปพอร์ตโฟลิโอ</p>
-        </div>
+        <h1>PORTFOLIO | <span>แฟ้มสะสมผลงาน</span></h1>
+        <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
+        <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
     </div>
 
+    <!-- ส่วนประวัติส่วนตัว -->
     <section id="about">
         <div class="section-title">
-            <h2>เกี่ยวกับฉัน</h2>
-            <p>ข้อมูลส่วนตัวเบื้องต้น</p>
+            <h2>ประวัติส่วนตัว</h2>
         </div>
         <div class="card">
             <div class="profile-grid">
-                <div class="profile-item"><strong>ชื่อ-นามสกุล:</strong> จักริน ต่างสี</div>
-                <div class="profile-item"><strong>ความสนใจ:</strong> การพัฒนาเว็บไซต์ และเทคโนโลยี</div>
+                <div class="profile-item"><strong>ชื่อ-นามสกุล:</strong> นายจักริน ต่างสี</div>
+                <div class="profile-item"><strong>ชื่อเล่น:</strong> จัก</div>
+                <div class="profile-item"><strong>อายุ:</strong> 18 ปี</div>
+                <div class="profile-item"><strong>เกิดวันที่:</strong> 29 สิงหาคม 2554</div>
+                <div class="profile-item"><strong>ศาสนา:</strong> พุทธ</div>
+                <div class="profile-item"><strong>แผนการเรียน:</strong> ศิลป์-คำนวณ (เกรดเฉลี่ย 2.37)</div>
             </div>
             <div class="motto">
-                "ความพยายามไม่เคยทรยศใคร"
+                คติประจำใจ: "ความพยายามและทักษะที่ฝึกฝนจะเป็นแรงผลักดันไปสู่ความสำเร็จ"
             </div>
         </div>
     </section>
 
+    <!-- ส่วนประวัติการศึกษาจัดลำดับอ่านง่ายแยกการศึกษาชัดเจน -->
     <section id="education" class="education">
         <div class="section-title">
             <h2>ประวัติการศึกษา</h2>
-            <p>เส้นทางการเรียนรู้ของผม</p>
         </div>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>ระดับการศึกษาปัจจุบัน</h3>
-                <p>กำลังศึกษาและเรียนรู้พัฒนาโครงสร้างโค้ดออนไลน์อย่างต่อเนื่อง</p>
+                <h3>ระดับชั้นอนุบาล 1</h3>
+                <p>โรงเรียนบ้านโคกคา</p>
+            </div>
+            <div class="timeline-item">
+                <h3>ระดับชั้นอนุบาล 2 - อนุบาล 3</h3>
+                <p>โรงเรียนบ้านนาใหญ่</p>
+            </div>
+            <div class="timeline-item">
+                <h3>ระดับชั้นประถมศึกษาปีที่ 1 - 6</h3>
+                <p>โรงเรียนบ้านนาใหญ่</p>
+            </div>
+            <div class="timeline-item">
+                <h3>ระดับชั้นมัธยมศึกษาปีที่ 1 - 6</h3>
+                <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์ รัชมังคลาภิเษก</p>
             </div>
         </div>
     </section>
 
+    <!-- ส่วนเหตุผลและแรงบันดาลใจ -->
+    <section id="why">
+        <div class="section-title">
+            <h2>ทำไมต้องเรียนสาขานี้</h2>
+        </div>
+        <div class="card why-box">
+            <p><strong>แรงบันดาลใจ:</strong> สนใจเรื่องการขนส่งและการจัดการสินค้าในชีวิตประจำวัน ที่ต้องการการวางแผนและจัดการให้สินค้าถึงปลายทางอย่างเป็นระบบ</p>
+            <p><strong>เหตุผลที่เลือกเรียน:</strong> เลือกศึกษาต่อสาขาการจัดการโลจิสติกส์และซัพพลายเชน เพื่อเรียนรู้การวางแผนขนส่ง การจัดเก็บ การบริหารสินค้าคงคลัง และกระบวนการเคลื่อนย้ายสินค้าเพื่อนำไปพัฒนาต่อยอด</p>
+            <p><strong>เป้าหมายในอนาคต:</strong> ต้องการทำงานด้านการขนส่งหรือหน่วยงานภาครัฐที่เกี่ยวข้อง (เช่น กรมการขนส่งทางบก) จึงตั้งใจศึกษาเพื่อสร้างพื้นฐานความรู้และทักษะสำหรับเป้าหมายการทำงานต่อไป</p>
+        </div>
+    </section>
+
+    <!-- ส่วนแสดงรูปภาพกิจกรรมจริงพร้อมเปลี่ยนชื่อหัวข้อรูปภาพตามสั่ง -->
     <section id="works">
         <div class="section-title">
             <h2>ผลงานและกิจกรรม</h2>
-            <p>คลังภาพผลงานกิจกรรมที่ดึงรูปถ่ายจริงมาแสดงผล</p>
         </div>
         <div class="gallery">
             <div class="gallery-card">
-                <img src="1794321907527.jpg" alt="กิจกรรมชิ้นที่ 1">
-                <h3>กิจกรรมชิ้นที่ 1</h3>
-                <p>ภาพผลงานชิ้นที่หนึ่งของคุณอัปโหลดขึ้นจอสมบูรณ์แบบแล้วครับ</p>
+                <img src="1794321907527.jpg" alt="จิตอาสาจัดทำโต๊ะไม้ให้ครู">
+                <h3>จิตอาสาจัดทำโต๊ะไม้ให้ครู</h3>
+                <p>กิจกรรมบำเพ็ญประโยชน์ร่วมใจกันลงมือวางแผนและจัดทำโต๊ะไม้เพื่อนำไปมอบให้ครูสำหรับนำไปใช้ประโยชน์ในสถานศึกษา</p>
             </div>
             <div class="gallery-card">
-                <img src="1794321907616.jpg" alt="กิจกรรมชิ้นที่ 2">
-                <h3>กิจกรรมชิ้นที่ 2</h3>
-                <p>ภาพผลงานชิ้นที่สองของคุณอัปโหลดขึ้นจอสมบูรณ์แบบแล้วครับ</p>
+                <img src="1794321907616.jpg" alt="เกียรติบัตร">
+                <h3>เกียรติบัตร</h3>
+                <p>เกียรติบัตรรางวัลความสำเร็จและการเข้าร่วมกิจกรรมต่าง ๆ ที่ได้รวบรวมเพื่อแสดงทักษะความรู้และความสามารถ</p>
             </div>
         </div>
     </section>
 
-    <footer style="background: var(--navy); color: white; text-align: center; padding: 25px; font-size: 14px;">
+    <footer>
         <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
     </footer>
 
