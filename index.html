@@ -1,39 +1,3 @@
-@font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -41,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PORTFOLIO | จักริน ต่างสี</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://googleapis.com" rel="stylesheet">
 
 <style>
 * {
@@ -256,7 +220,7 @@ section {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
@@ -336,7 +300,6 @@ section {
 </head>
 <body>
 
-    <!-- ดึงคลาสเมนูที่คุณเขียนไว้มาทำงานจริง -->
     <header>
         <div class="logo">PORTFOLIO</div>
         <nav>
@@ -346,7 +309,6 @@ section {
         </nav>
     </header>
 
-    <!-- ดึงส่วน Hero แนะนำตัวสีน้ำเงินส้มที่คุณดีไซน์ไว้ขึ้นแสดงผล -->
     <div class="hero">
         <div class="hero-text">
             <h1>สวัสดี! ผมคือ <br><span>จักริน ต่างสี</span></h1>
@@ -358,7 +320,6 @@ section {
         </div>
     </div>
 
-    <!-- เปิดระบบประวัติเกี่ยวกับฉันตามระบบ Grid ของคุณ -->
     <section id="about">
         <div class="section-title">
             <h2>เกี่ยวกับฉัน</h2>
@@ -375,7 +336,6 @@ section {
         </div>
     </section>
 
-    <!-- เปิดแถบการศึกษาประวัติการศึกษา (Timeline) ของคุณ -->
     <section id="education" class="education">
         <div class="section-title">
             <h2>ประวัติการศึกษา</h2>
@@ -389,27 +349,25 @@ section {
         </div>
     </section>
 
-    <!-- ดึงส่วนแกลเลอรีภาพกิจกรรม/เกียรติบัตรที่คุณอุตส่าห์ตั้งค่า Grid ไว้มาแสดงผลจริง -->
     <section id="works">
         <div class="section-title">
             <h2>ผลงานและกิจกรรม</h2>
-            <p>คลังภาพผลงานกิจกรรมที่จัดระเบียบแบบ Grid</p>
+            <p>คลังภาพผลงานกิจกรรมที่ดึงรูปถ่ายจริงมาแสดงผล</p>
         </div>
         <div class="gallery">
             <div class="gallery-card">
-                <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 1</div>
+                <img src="1794321907527.jpg" alt="กิจกรรมชิ้นที่ 1">
                 <h3>กิจกรรมชิ้นที่ 1</h3>
-                <p>คำอธิบายกิจกรรมชิ้นที่ 1</p>
+                <p>ภาพผลงานชิ้นที่หนึ่งของคุณอัปโหลดขึ้นจอสมบูรณ์แบบแล้วครับ</p>
             </div>
             <div class="gallery-card">
-                <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 2</div>
+                <img src="1794321907616.jpg" alt="กิจกรรมชิ้นที่ 2">
                 <h3>กิจกรรมชิ้นที่ 2</h3>
-                <p>คำอธิบายกิจกรรมชิ้นที่ 2</p>
+                <p>ภาพผลงานชิ้นที่สองของคุณอัปโหลดขึ้นจอสมบูรณ์แบบแล้วครับ</p>
             </div>
         </div>
     </section>
 
-    <!-- ปิดท้ายเว็บสี Navy ตามธีมสีระบบของคุณ -->
     <footer style="background: var(--navy); color: white; text-align: center; padding: 25px; font-size: 14px;">
         <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
     </footer>
