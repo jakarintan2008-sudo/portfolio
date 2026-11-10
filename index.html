@@ -17,44 +17,40 @@
 
 body {
     font-family: 'Kanit', sans-serif;
-    background: #f8fafc;
-    color: #1e293b;
+    background: #f4f6fa;
+    color: #25334a;
     line-height: 1.8;
 }
 
 :root {
-    --navy: #1e40af;       
-    --blue: #3b82f6;       
-    --orange: #ff7a00;     
+    --navy: #10294b;
+    --blue: #193d68;
+    --orange: #f39a35;
     --white: #ffffff;
 }
 
 header {
     background: var(--navy);
     color: white;
-    padding: 18px 8%;
+    padding: 16px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
     font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s;
+    margin-left: 20px;
+    font-size: 14px;
 }
 
 nav a:hover {
@@ -62,139 +58,125 @@ nav a:hover {
 }
 
 .hero {
-    min-height: 550px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #3b82f6 100%);
-    background-image: 
-        radial-gradient(at 0% 0%, rgba(255, 122, 0, 0.15) 0px, transparent 50%),
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 100% 100%, 25px 25px, 25px 25px;
+    min-height: 520px;
+    background: linear-gradient(120deg, #10294b, #244e7c);
     color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 80px 8%;
-    text-align: center;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
+    justify-content: space-around;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    width: 120%;
-    height: 100px;
-    background: #f8fafc;
-    transform: rotate(-2deg);
-    z-index: 1;
+.hero-text {
+    max-width: 550px;
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 55px;
     line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .hero h1 span {
     color: var(--orange);
-    position: relative;
-}
-
-.hero h2 {
-    font-size: 24px;
-    font-weight: 500;
-    color: #e2e8f0;
-    background: rgba(255, 255, 255, 0.07);
-    padding: 8px 25px;
-    border-radius: 50px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    letter-spacing: 0.5px;
-    margin-top: 5px;
 }
 
 .hero p {
-    font-size: 20px;
-    color: #ffffff;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.hero-image {
+    width: 260px;
+    height: 330px;
+    border: 3px dashed var(--orange);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #dce6f2;
+    background: rgba(255,255,255,0.08);
+}
+
+.button {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--navy);
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 25px;
     font-weight: 600;
-    border-bottom: 3px solid var(--orange);
-    padding-bottom: 8px;
-    letter-spacing: 0.5px;
 }
 
 section {
-    padding: 70px 8%;
+    padding: 75px 8%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
     color: var(--navy);
-    font-size: 34px;
-    font-weight: 700;
+    font-size: 32px;
+}
+
+.section-title p {
+    color: #778397;
 }
 
 .section-title h2::after {
     content: "";
     display: block;
     width: 65px;
-    height: 5px;
+    height: 4px;
     background: var(--orange);
-    margin: 12px auto;
+    margin: 10px auto;
     border-radius: 5px;
 }
 
 .card {
     background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(30,64,175,0.05);
-    max-width: 900px;
-    margin: auto;
-    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .profile-item {
-    padding: 14px 0;
-    border-bottom: 1px solid #f1f5f9;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf0f4;
     font-size: 16px;
 }
 
 .profile-item strong {
-    color: var(--navy);
-    font-weight: 600;
+    color: var(--blue);
 }
 
 .motto {
-    margin-top: 35px;
-    padding: 22px;
-    border-left: 6px solid var(--orange);
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 5px solid var(--orange);
     background: #fff7ed;
-    border-radius: 12px;
+    border-radius: 8px;
     color: var(--navy);
     text-align: center;
-    font-size: 17px;
-    font-weight: 600;
 }
 
 .education {
-    background: #f1f5f9;
+    background: #eaf0f7;
 }
 
 .timeline {
@@ -204,103 +186,116 @@ section {
 
 .timeline-item {
     background: white;
-    padding: 22px 28px;
-    margin-bottom: 18px;
-    border-left: 6px solid var(--navy);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-    border: 1px solid #e2e8f0;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--orange);
+    border-radius: 8px;
 }
 
 .timeline-item h3 {
     color: var(--navy);
-    font-size: 19px;
-    margin-bottom: 6px;
 }
 
-.timeline-item p {
-    color: #475569;
-    font-weight: 500;
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.why-box {
-    border-top: 5px solid var(--orange);
+.why-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    border-top: 4px solid var(--orange);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.why-box p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f1f5f9;
+.why-card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
 }
 
-.why-box p:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
+/* ================================
+   ผลงานและกิจกรรม
+================================ */
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-    max-width: 900px;
-    margin: auto;
+    gap: 22px;
 }
 
 .gallery-card {
     background: white;
-    padding: 22px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e2e8f0;
-    transition: transform 0.3s;
-}
-
-.gallery-card:hover {
-    transform: translateY(-5px);
+    padding: 15px;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
 }
 
 .gallery-card img {
     width: 100%;
-    height: 340px;
+    height: 240px;
     object-fit: cover;
-    border-radius: 14px;
-    margin-bottom: 18px;
+    display: block;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .gallery-card h3 {
     color: var(--navy);
-    font-size: 21px;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #f1f5f9;
+    margin-top: 12px;
 }
 
 .gallery-card p {
-    color: #475569;
-    font-size: 15px;
-    line-height: 1.6;
+    color: #718096;
+    font-size: 14px;
 }
 
-footer {
-    background: var(--navy);
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-size: 15px;
-    font-weight: 400;
+/* ================================
+   การแสดงผลงานกิจกรรมแบบใหญ่
+================================ */
+
+.work-main {
+    max-width: 1000px;
+    margin: auto;
 }
 
-@media (max-width: 768px) {
-    .profile-grid, .gallery {
-        grid-template-columns: 1fr;
-    }
-    .hero h1 {
-        font-size: 34px;
-    }
+.work-main .gallery-card img {
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    background: #f4f6fa;
+}
+
+/* ================================
+   เกียรติบัตร
+================================ */
+
+.certificate-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.certificate-card {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.certificate-card h3 {
+    color: var(--navy);
+    margin-top: 10px;
 }
 </style>
 </head>
@@ -317,9 +312,14 @@ footer {
     </header>
 
     <div class="hero">
-        <h1>PORTFOLIO | <span>แฟ้มสะสมผลงาน</span></h1>
-        <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
-        <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
+        <div class="hero-text">
+            <h1>PORTFOLIO | <br><span>แฟ้มสะสมผลงาน</span></h1>
+            <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
+            <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
+        </div>
+        <div class="hero-image">
+            <p>กรอบรูปพอร์ตโฟลิโอ</p>
+        </div>
     </div>
 
     <section id="about">
@@ -331,7 +331,7 @@ footer {
                 <div class="profile-item"><strong>ชื่อ-นามสกุล:</strong> นายจักริน ต่างสี</div>
                 <div class="profile-item"><strong>ชื่อเล่น:</strong> จัก</div>
                 <div class="profile-item"><strong>อายุ:</strong> 18 ปี</div>
-                <div class="profile-item"><strong>เกิดวันที่:</strong> 29 สิงหาคม 2544</div>
+                <div class="profile-item"><strong>เกิดวันที่:</strong> 29 สิงหาคม 2551</div>
                 <div class="profile-item"><strong>ศาสนา:</strong> พุทธ</div>
                 <div class="profile-item"><strong>แผนการเรียน:</strong> ศิลป์-คำนวณ (เกรดเฉลี่ย 2.37)</div>
             </div>
@@ -359,7 +359,7 @@ footer {
                 <p>โรงเรียนบ้านนาใหญ่</p>
             </div>
             <div class="timeline-item">
-                <h3>ระดับชั้นมัยมศึกษาปีที่ 1 - 6</h3>
+                <h3>ระดับชั้นมัธยมศึกษาปีที่ 1 - 6</h3>
                 <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์ รัชมังคลาภิเษก</p>
             </div>
         </div>
@@ -369,9 +369,9 @@ footer {
         <div class="section-title">
             <h2>ทำไมต้องเรียนสาขานี้</h2>
         </div>
-        <div class="card why-box">
-            <p><strong>แรงบันดาลใจ:</strong> สนใจเรื่องการขนส่งและการจัดการสินค้าในชีวิตประจำวัน ที่ต้องการการวางแผนและจัดการให้สินค้าถึงปลายทางอย่างเป็นระบบ</p>
-            <p><strong>เหตุผลที่เลือกเรียน:</strong> เลือกศึกษาต่อสาขาการจัดการโลจิสติกส์และซัพพลายเชน เพื่อเรียนรู้การวางแผนขนส่ง การจัดเก็บ การบริหารสินค้าคงคลัง และกระบวนการเคลื่อนย้ายสินค้าเพื่อนำไปพัฒนาต่อยอด</p>
+        <div class="card why-card" style="max-width: 900px; margin: auto;">
+            <p style="margin-bottom: 15px;"><strong>แรงบันดาลใจ:</strong> สนใจเรื่องการขนส่งและการจัดการสินค้าในชีวิตประจำวัน ที่ต้องการการวางแผนและจัดการให้สินค้าถึงปลายทางอย่างเป็นระบบ</p>
+            <p style="margin-bottom: 15px;"><strong>เหตุผลที่เลือกเรียน:</strong> เลือกศึกษาต่อสาขาการจัดการโลจิสติกส์และซัพพลายเชน เพื่อเรียนรู้การวางแผนขนส่ง การจัดเก็บ การบริหารสินค้าคงคลัง และกระบวนการเคลื่อนย้ายสินค้าเพื่อนำไปพัฒนาต่อยอด</p>
             <p><strong>เป้าหมายในอนาคต:</strong> ต้องการทำงานด้านการขนส่งหรือหน่วยงานภาครัฐที่เกี่ยวข้อง (เช่น กรมการขนส่งทางบก) จึงตั้งใจศึกษาเพื่อสร้างพื้นฐานความรู้และทักษะสำหรับเป้าหมายการทำงานต่อไป</p>
         </div>
     </section>
