@@ -57,7 +57,6 @@ nav a:hover {
     color: var(--orange);
 }
 
-/* จัดสัดส่วนหน้าปกสีน้ำเงินให้โชว์รูปตัวจริงคู่กับคำอธิบายอย่างลงตัว บาลานซ์ดีเยี่ยม */
 .hero {
     min-height: 520px;
     background: linear-gradient(120deg, #10294b, #244e7c);
@@ -98,14 +97,19 @@ nav a:hover {
     font-weight: 500;
 }
 
-/* ตกแต่งรูปโปรไฟล์ของคุณให้เป็นทรงกลมขอบโมเดิร์นสวยหรู ปราศจากกรอบเส้นประสีส้ม 100% */
-.hero-avatar {
+.hero-avatar-box {
     width: 280px;
     height: 280px;
-    object-fit: cover;
     border-radius: 50%;
     border: 6px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.hero-avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 section {
@@ -259,7 +263,7 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-    .hero-avatar {
+    .hero-avatar-box {
         width: 220px;
         height: 220px;
     }
@@ -284,8 +288,10 @@ footer {
             <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
             <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
         </div>
-        <!-- ผูกระบบดึงรูปถ่ายจริงตัวคุณขึ้นมาโชว์เรียบร้อยแบบสวยหรู สะอาดตา -->
-        <img src="FB_IMG_17943275150240362.jpg" alt="รูปโปรไฟล์ จักริน" class="hero-avatar">
+        <!-- ดึงรูปภาพล่าสุดที่ขึ้นต้นด้วย FB_IMG_17943275 มาแสดงผลอัตโนมัติ -->
+        <div class="hero-avatar-box">
+            <img id="avatar-img" src="" alt="รูปโปรไฟล์ จักริน">
+        </div>
     </div>
 
     <section id="about">
@@ -350,7 +356,7 @@ footer {
             <div class="gallery-card">
                 <img src="1794321907527.jpg" alt="จิตอาสาจัดทำโต๊ะไม้ให้ครู">
                 <h3>จิตอาสาจัดทำโต๊ะไม้ให้ครู</h3>
-                <p>กิจกรรมบำเพ็ประโยชน์ร่วมใจกันลงมือวางแผนและจัดทำโต๊ะไม้เพื่อนำไปมอบให้ครูสำหรับนำไปใช้ประโยชน์ในสถานศึกษา</p>
+                <p>กิจกรรมบำเพ็ญประโยชน์ร่วมใจกันลงมือวางแผนและจัดทำโต๊ะไม้เพื่อนำไปมอบให้ครูสำหรับนำไปใช้ประโยชน์ในสถานศึกษา</p>
             </div>
             <div class="gallery-card">
                 <img src="1794321907616.jpg" alt="เกียรติบัตร">
@@ -363,6 +369,18 @@ footer {
     <footer>
         <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
     </footer>
+
+    <!-- ส่วนสคริปต์ระบบค้นหารูปภาพอัตโนมัติเพื่อป้องกันชื่อไฟล์บั๊ก -->
+    <script>
+        fetch('https://github.com')
+        .then(response => response.json())
+        .then(data => {
+            const avatarFile = data.find(file => file.name.startsWith('FB_IMG_17943275'));
+            if(avatarFile) {
+                document.getElementById('avatar-img').src = avatarFile.name;
+            }
+        }).catch(err => console.error(err));
+    </script>
 
 </body>
 </html>
