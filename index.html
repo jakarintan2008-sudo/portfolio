@@ -1,3 +1,39 @@
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://gstatic.com) format('truetype');
+}
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -300,7 +336,7 @@ section {
 </head>
 <body>
 
-    <!-- แถบเมนูด้านบนตามคลาสที่ตั้งไว้ -->
+    <!-- ดึงคลาสเมนูที่คุณเขียนไว้มาทำงานจริง -->
     <header>
         <div class="logo">PORTFOLIO</div>
         <nav>
@@ -310,7 +346,7 @@ section {
         </nav>
     </header>
 
-    <!-- ส่วนแนะนำตัวหน้าแรก (Hero) -->
+    <!-- ดึงส่วน Hero แนะนำตัวสีน้ำเงินส้มที่คุณดีไซน์ไว้ขึ้นแสดงผล -->
     <div class="hero">
         <div class="hero-text">
             <h1>สวัสดี! ผมคือ <br><span>จักริน ต่างสี</span></h1>
@@ -318,11 +354,11 @@ section {
             <a href="#about" class="button">ทำความรู้จักกันเพิ่ม</a>
         </div>
         <div class="hero-image">
-            <p>กรอบใส่รูปภาพพอร์ตโฟลิโอ</p>
+            <p>กรอบรูปพอร์ตโฟลิโอ</p>
         </div>
     </div>
 
-    <!-- กล่องประวัติเกี่ยวกับฉัน -->
+    <!-- เปิดระบบประวัติเกี่ยวกับฉันตามระบบ Grid ของคุณ -->
     <section id="about">
         <div class="section-title">
             <h2>เกี่ยวกับฉัน</h2>
@@ -339,7 +375,7 @@ section {
         </div>
     </section>
 
-    <!-- ส่วนประวัติการศึกษา (Timeline) -->
+    <!-- เปิดแถบการศึกษาประวัติการศึกษา (Timeline) ของคุณ -->
     <section id="education" class="education">
         <div class="section-title">
             <h2>ประวัติการศึกษา</h2>
@@ -348,12 +384,12 @@ section {
         <div class="timeline">
             <div class="timeline-item">
                 <h3>ระดับการศึกษาปัจจุบัน</h3>
-                <p>กำลังศึกษาและเรียนรู้พัฒนาโครงสร้างโค้ดและระบบเว็บไซต์ออนไลน์</p>
+                <p>กำลังศึกษาและเรียนรู้พัฒนาโครงสร้างโค้ดออนไลน์อย่างต่อเนื่อง</p>
             </div>
         </div>
     </section>
 
-    <!-- ส่วนแสดงโครงสร้างภาพกิจกรรมและผลงาน -->
+    <!-- ดึงส่วนแกลเลอรีภาพกิจกรรม/เกียรติบัตรที่คุณอุตส่าห์ตั้งค่า Grid ไว้มาแสดงผลจริง -->
     <section id="works">
         <div class="section-title">
             <h2>ผลงานและกิจกรรม</h2>
@@ -363,22 +399,17 @@ section {
             <div class="gallery-card">
                 <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 1</div>
                 <h3>กิจกรรมชิ้นที่ 1</h3>
-                <p>คำอธิบายกิจกรรมชิ้นที่ 1 ตามโค้ดที่ออกแบบไว้</p>
+                <p>คำอธิบายกิจกรรมชิ้นที่ 1</p>
             </div>
             <div class="gallery-card">
                 <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 2</div>
                 <h3>กิจกรรมชิ้นที่ 2</h3>
-                <p>คำอธิบายกิจกรรมชิ้นที่ 2 ตามโค้ดที่ออกแบบไว้</p>
-            </div>
-            <div class="gallery-card">
-                <div style="width:100%; height:240px; background:#e2e8f0; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#4a5568;">พื้นที่แสดงรูปกิจกรรม 3</div>
-                <h3>กิจกรรมชิ้นที่ 3</h3>
-                <p>คำอธิบายกิจกรรมชิ้นที่ 3 ตามโค้ดที่ออกแบบไว้</p>
+                <p>คำอธิบายกิจกรรมชิ้นที่ 2</p>
             </div>
         </div>
     </section>
 
-    <!-- ส่วนท้ายเว็บสี Navy ตามธีมหลัก -->
+    <!-- ปิดท้ายเว็บสี Navy ตามธีมสีระบบของคุณ -->
     <footer style="background: var(--navy); color: white; text-align: center; padding: 25px; font-size: 14px;">
         <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
     </footer>
