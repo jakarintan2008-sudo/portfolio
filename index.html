@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -281,10 +282,10 @@ footer {
         
         <div class="creators-photos">
             <div class="creator-photo-box">
-                <img id="photo-3" src="" alt="ผู้จัดทำคนที่ 1">
+                <img src="FB_IMG_1794327542383.jpg" alt="ผู้จัดทำคนที่ 1">
             </div>
             <div class="creator-photo-box">
-                <img id="photo-4" src="FB_IMG_1794350131552.jpg" alt="ผู้จัดทำคนที่ 2">
+                <img src="FB_IMG_1794350131552.jpg" alt="ผู้จัดทำคนที่ 2">
             </div>
         </div>
     </div>
@@ -365,17 +366,6 @@ footer {
     <footer>
         <p>© 2026 จักริน ต่างสี & อครินทร์ วรินเวช</p>
     </footer>
-
-    <script>
-        fetch('https://github.com')
-        .then(res => res.json())
-        .then(files => {
-            const file3 = files.find(f => f.name.startsWith('FB_IMG_17943275'));
-            const file4 = files.find(f => f.name.startsWith('FB_IMG_17943501'));
-            if (file3) document.getElementById('photo-3').src = file3.name;
-            if (file4) document.getElementById('photo-4').src = file4.name;
-        });
-    </script>
 
 </body>
 </html>
