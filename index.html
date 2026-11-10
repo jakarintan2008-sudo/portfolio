@@ -58,24 +58,23 @@ nav a:hover {
 }
 
 .hero {
-    min-height: 520px;
+    min-height: 380px;
     background: linear-gradient(120deg, #10294b, #244e7c);
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 60px 8%;
-    flex-wrap: wrap;
-    gap: 40px;
+    text-align: center;
 }
 
 .hero-text {
-    flex: 1;
-    max-width: 550px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 46px;
     line-height: 1.3;
     margin-bottom: 15px;
 }
@@ -85,31 +84,16 @@ nav a:hover {
 }
 
 .hero h2 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
     margin-bottom: 12px;
     color: #ffffff;
 }
 
 .hero p {
-    font-size: 19px;
+    font-size: 20px;
     color: var(--orange);
     font-weight: 500;
-}
-
-.hero-avatar-box {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 6px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    overflow: hidden;
-}
-
-.hero-avatar-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 section {
@@ -215,6 +199,10 @@ section {
     margin-bottom: 12px;
 }
 
+/* ================================
+   ผลงานและกิจกรรม
+================================ */
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -247,25 +235,52 @@ section {
     font-size: 14px;
 }
 
-footer {
-    background: var(--navy);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
+/* ================================
+   การแสดงผลงานกิจกรรมแบบใหญ่
+================================ */
+
+.work-main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.work-main .gallery-card img {
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    background: #f4f6fa;
+}
+
+/* ================================
+   เกียรติบัตร
+================================ */
+
+.certificate-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.certificate-card {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.certificate-card h3 {
+    color: var(--navy);
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
     .profile-grid, .gallery {
         grid-template-columns: 1fr;
     }
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-avatar-box {
-        width: 220px;
-        height: 220px;
+    .hero h1 {
+        font-size: 34px;
     }
 }
 </style>
@@ -282,15 +297,12 @@ footer {
         </nav>
     </header>
 
+    <!-- หน้าปกสะอาดเรียบร้อย จัดกึ่งกลางสวยงาม ไม่มีรูปภาพหรือกรอบใด ๆ มาเกะกะสายตาแล้วครับ -->
     <div class="hero">
         <div class="hero-text">
             <h1>PORTFOLIO | <br><span>แฟ้มสะสมผลงาน</span></h1>
             <h2>คณะวิศวกรรมและเทคโนโลยีอุตสาหกรรม</h2>
             <p>สาขาการจัดการโลจิสติกส์ และซัพพลายเชน</p>
-        </div>
-        <!-- ดึงรูปภาพล่าสุดที่ขึ้นต้นด้วย FB_IMG_17943275 มาแสดงผลอัตโนมัติ -->
-        <div class="hero-avatar-box">
-            <img id="avatar-img" src="" alt="รูปโปรไฟล์ จักริน">
         </div>
     </div>
 
@@ -369,18 +381,6 @@ footer {
     <footer>
         <p>© 2026 จักริน ต่างสี. All rights reserved.</p>
     </footer>
-
-    <!-- ส่วนสคริปต์ระบบค้นหารูปภาพอัตโนมัติเพื่อป้องกันชื่อไฟล์บั๊ก -->
-    <script>
-        fetch('https://github.com')
-        .then(response => response.json())
-        .then(data => {
-            const avatarFile = data.find(file => file.name.startsWith('FB_IMG_17943275'));
-            if(avatarFile) {
-                document.getElementById('avatar-img').src = avatarFile.name;
-            }
-        }).catch(err => console.error(err));
-    </script>
 
 </body>
 </html>
